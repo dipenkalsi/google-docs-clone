@@ -2,6 +2,7 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import { AuthContextProvider } from './context/AuthContext'
+import { DbContextProvider } from './context/DbContext';
 
 const inter = Poppins({ subsets: ['latin'] , weight:'400'})
 
@@ -15,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <AuthContextProvider>
+        <DbContextProvider>
         {children}
+        </DbContextProvider>
       </AuthContextProvider>
         </body>
     </html>

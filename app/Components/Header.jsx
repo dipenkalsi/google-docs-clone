@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className='flex items-center sticky top-0 z-50 px-2 md:px-4 py-2 bg-white shadow-md justify-between'>
       {/* left icons */}
-      <div className='flex items-center justify-center mr-5 text-blue-400'>
+      <div className='flex items-center justify-center mr-5 text-blue-500'>
     <Button variant='text' className='rounded-full p-3 hidden md:block'>
     <MdMenu color='gray' size={30}/>
     </Button>
@@ -31,7 +31,6 @@ const Header = () => {
     <Button variant='text' className='rounded-full p-3 hidden  md:block'>
     <IoMdApps color='gray' size={30} className=''/>
     </Button>
-    {/* <FaCircleUser color='gray' size={30} className=''/> */}
     <img src={user.photoURL} onClick={logOut} alt="" className='h-10 w-10 rounded-full cursor-pointer' loading='lazy'/>
     </div>
     </header>
